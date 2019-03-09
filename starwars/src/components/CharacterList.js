@@ -8,9 +8,9 @@ import './StarWars.css';
 function CharacterList(props) {
     return (
         <div className="hero">
-            {props.char.map(character => {
+            {props.data.map(character => {
                 return (
-                    <Character char={character} />
+                    <Character data={character} />
                 )
             })}
         </div>
