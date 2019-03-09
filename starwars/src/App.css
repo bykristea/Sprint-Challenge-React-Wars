@@ -1,8 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 .App {
   text-align: center;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  font-family: 'Oswald', sans-serif;
+  margin: 10px;
+  color: white;
+  font-size: 90px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 /* write your parent styles in here for your App.js */
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}

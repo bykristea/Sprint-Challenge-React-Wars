@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* border: 2px solid white; */
+    /* padding: 10px; */
+    margin:20px;
+    /* background-color: rgba(255,255,255, 0.7); */
+}
+
+.Character {
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 40px;
+    padding: 10px;
+    line-height: 1.5;
+    animation: HeroAnimation 3s 0.2s forwards  cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 0;
+}
+
+@keyframes HeroAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+  }
+
+  .Character h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 50px;
+      font-weight: bold;
+  }
+
+  .Character p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+
+  }
+
+  .buttons {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  button{
+    font-family: 'Oswald', sans-serif;
+    border-radius: 10%;
+    font-size: 24px;
+    width: 100px;
+    height: 50px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: black;
+    color:white;
+  }

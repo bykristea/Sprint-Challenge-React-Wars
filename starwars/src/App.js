@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import CharacterList from './components/CharacterList';
 
 class App extends Component {
   constructor() {
@@ -22,17 +23,36 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        console.log(data);
+        this.setState({ starwarsChars: data.results, nextUrl : data.next, prevUrl:data.previous });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
 
+  nextHandler=(event)=>{
+    console.log("Next handler..");
+    if (this.state.nextUrl) {
+        this.getCharacters(this.state.nextUrl);
+    }
+}
+  prevHandler=(event)=>{
+      console.log("Prev handler..");
+      if (this.state.prevUrl) {
+          this.getCharacters(this.state.prevUrl);
+      }
+  }
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+            <CharacterList data= {this.state.starwarsChars} />
+
+            <div className="buttons">
+            <button  onClick={this.prevHandler}>Previous</button>
+            <button onClick={this.nextHandler}>Next</button>
+            </div>
       </div>
     );
   }
