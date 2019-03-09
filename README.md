@@ -26,11 +26,17 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+A: React is a UI library used to build applications more efficiently and faster. React uses its own virtual DOM, which helps with applications that have heavy DOM manipulation, by keeping load and refresh times fast increasing performance. Utilizing component based   UI keeps code modular and reusable, either in your same application or a new one. React is flexible and allows you to used other JavaScript libraries the way that you want to with out being overly complicated. 
+
 - [ ] What does it mean to _think_ in react?
 
+A: Thinking in React is about thinking of your App, and breaking it down into "components". Draw boxes around mock ups, to group things. These groups will more than likely turn into your components. Arrange those components into your Hierarchy, then start your static build. Then ID data that will need to change and where your State will ive. Lastly add inverse flow, so that your data can flow up the Hierarchy as well. 
+
 - [ ] Describe state.
+A: State can Change-Mutable. Internal to a component to track information. Used when data is changing within a component. 
 
 - [ ] Describe props.
+A: Props(Properties): Unchangeable and Immutable. Components receive props from their parent. Can be reused. Props are passed to components. 
 
 ## Project Set Up
 
